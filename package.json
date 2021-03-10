@@ -4,9 +4,10 @@
   "description": "A simple calculator to study javascript tests",
   "main": "main.js",
   "scripts": {
-    "test": "npx mocha --parallel --exit tests/",
-    "test:dev": "npx mocha tests/ -w",
-    "test:cov": "npx nyc --reporter=html npm test"
+    "test": "npx mocha --parallel --exit test/",
+    "test:dev": "npx mocha test/ -w",
+    "test:cov": "npx nyc --reporter=html npm test",
+    "test:mut": "npx stryker run"
   },
   "keywords": [
     "tests",
@@ -16,6 +17,8 @@
   "author": "Nathália Rebouças",
   "license": "MIT",
   "devDependencies": {
+    "@stryker-mutator/core": "^4.5.0",
+    "@stryker-mutator/mocha-runner": "^4.5.0",
     "chai": "^4.3.3",
     "mocha": "^8.3.1",
     "nyc": "^15.1.0"
