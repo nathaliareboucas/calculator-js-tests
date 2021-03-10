@@ -1,0 +1,21 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A simple calculator to study javascript tests",
+  "main": "main.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test:dev": "npm test -- --watch"
+  },
+  "keywords": [
+    "tests",
+    "tdd",
+    "calculator"
+  ],
+  "author": "Nathália Rebouças",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.3",
+    "mocha": "^8.3.1"
+  }
+}
