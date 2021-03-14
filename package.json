@@ -4,9 +4,9 @@
   "description": "A simple calculator to study javascript tests",
   "main": "main.js",
   "scripts": {
-    "test": "npx mocha --parallel --exit test/",
-    "test:dev": "npx mocha test/ -w",
-    "test:cov": "npx nyc --reporter=html npm test",
+    "test": "npx mocha --parallel --exit test/ --require @babel/register",
+    "test:dev": "npx mocha test/ --require @babel/register -w",
+    "test:cov": "npx nyc --reporter=text npm test",
     "test:mut": "npx stryker run"
   },
   "keywords": [
@@ -17,10 +17,17 @@
   "author": "Nathália Rebouças",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/register": "^7.13.8",
     "@stryker-mutator/core": "^4.5.0",
     "@stryker-mutator/mocha-runner": "^4.5.0",
     "chai": "^4.3.3",
     "mocha": "^8.3.1",
     "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
   }
 }

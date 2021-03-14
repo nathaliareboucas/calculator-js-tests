@@ -1,17 +1,7 @@
-module.exports = {
-	sum: function(numberOne, numberTwo) {
-		return numberOne + numberTwo;
-	},
+const sum = (numberOne, numberTwo) => numberOne + numberTwo;
+const sub = (numberOne, numberTwo) => numberOne - numberTwo;
+const mult = (numberOne, numberTwo) => numberOne * numberTwo;
+const div = (numberOne, numberTwo) => numberTwo === 0 ? 
+	'Não é possível divisão por zero' : numberOne / numberTwo;
 
-	sub: function(numberOne, numberTwo) {
-		return numberOne - numberTwo;
-	},
-
-	mult: function(numberOne, numberTwo) {
-		return numberOne * numberTwo;
-	},
-
-	div: function(numberOne, numberTwo) {
-		return numberTwo === 0 ? 'Não é possível divisão por zero' : numberOne / numberTwo;
-	},
-};
+	export {sum, sub, mult, div};
